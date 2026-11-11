@@ -1,0 +1,31 @@
+# Arma el diario todas las mañanas y lo guarda en la carpeta docs/.
+# GitHub Pages publica esa carpeta como página web.
+name: Armar el diario
+
+on:
+  schedule:
+    # Hora en UTC. Guatemala es UTC-6, así que 11:37 UTC = 5:37 a. m. en Guatemala.
+    # GitHub a veces atrasa estas tareas unos minutos.
+    - cron: "37 11 * * *"
+  workflow_dispatch:   # botón "Run workflow" para armarlo cuando querás
+
+permissions:
+  contents: write
+
+jobs:
+  diario:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python diario.py
+      - name: Guardar el diario
+        run: |
+          git config user.name "Diario de Pedro"
+          git config user.email "diario@users.noreply.github.com"
+          git add docs
+          git commit -m "Diario del $(TZ=America/Guatemala date +%F)" || echo "Sin cambios"
+          git push
