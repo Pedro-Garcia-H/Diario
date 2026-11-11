@@ -135,7 +135,7 @@ NOTA_ROJA = [
 ALERTAS = [
     "corte de agua", "cortes de agua", "sin agua", "empagua",
     "corte de energia", "suspension de energia", "corte de luz", "eegsa",
-    "frente frio", "alerta roja", "alerta naranja", "alerta amarilla",
+    "frente frio", "alerta por lluvias", "alerta por frente frio", "conred declara alerta",
     "ceniza", "erupcion", "conred declara", "lluvias fuertes",
     "convocatoria del tse", "tse convoca", "juntas electorales",
 ]
