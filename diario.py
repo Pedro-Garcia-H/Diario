@@ -317,14 +317,30 @@ def leer_partidos():
     Devuelve (proximos, resultados)."""
     desde = (AHORA - dt.timedelta(days=config.DIAS_RESULTADOS)).strftime("%Y%m%d")
     hasta = (AHORA + dt.timedelta(days=config.DIAS_PARTIDOS)).strftime("%Y%m%d")
-    proximos, resultados, ids, fallaron = [], [], set(), []
+    proximos, resultados, ids, fallaron, errores = [], [], set(), [], set()
+    dias = [(AHORA + dt.timedelta(days=d)).strftime("%Y%m%d")
+            for d in range(-config.DIAS_RESULTADOS, config.DIAS_PARTIDOS + 1)]
     for codigo, liga in config.LIGAS_ESPN.items():
         url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{codigo}/scoreboard"
+        eventos = None
+        # Primero se piden todos los días de un solo; si ESPN no lo acepta, día por día.
         try:
-            eventos = descargar(url, params={"dates": f"{desde}-{hasta}", "limit": 300}).json().get("events", [])
-        except Exception:
-            fallaron.append(liga)
-            continue
+            eventos = descargar(url, timeout=15, params={"dates": f"{desde}-{hasta}"}).json().get("events", [])
+        except Exception as err:
+            errores.add(str(getattr(getattr(err, "response", None), "status_code", type(err).__name__)))
+            eventos = []
+            ok = False
+            for dia in dias:
+                try:
+                    eventos += descargar(url, timeout=15, params={"dates": dia}).json().get("events", [])
+                    ok = True
+                except Exception as err2:
+                    errores.add(str(getattr(getattr(err2, "response", None), "status_code", type(err2).__name__)))
+                    if not ok:
+                        break  # si el primer día también falla, esa liga no funciona
+            if not ok:
+                fallaron.append(liga)
+                continue
         for ev in eventos:
             if ev.get("id") in ids:
                 continue
@@ -349,7 +365,7 @@ def leer_partidos():
             elif fecha.date() >= AHORA.date():
                 proximos.append(p)
     if len(fallaron) == len(config.LIGAS_ESPN):
-        AVISOS.append("No pude leer los partidos de ESPN.")
+        AVISOS.append(f"No pude leer los partidos de ESPN (error {', '.join(sorted(errores))}).")
     elif fallaron:
         AVISOS.append(f"ESPN no respondió para: {', '.join(fallaron)}.")
     proximos.sort(key=lambda p: p["fecha"])

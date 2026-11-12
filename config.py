@@ -110,13 +110,12 @@ SECCIONES = {
         "max_notas": 5,
         # De estos medios solo se toman las notas que hablan de eventos.
         "fuentes": [
-            {"medio": "AGN", "url": "https://agn.gt/feed/", "peso": 2},
             {"medio": "Prensa Libre", "url": "https://www.prensalibre.com/feed/", "peso": 2},
             {"medio": "Emisoras Unidas", "url": "https://emisorasunidas.com/feed/", "peso": 1},
             {"medio": "Publinews", "url": "https://www.publinews.gt/arc/outboundfeeds/rss/?outputType=xml", "peso": 1},
         ],
         "solo_palabras": [
-            "finde cultural", "que hacer", "agenda cultural", "festival", "concierto",
+            "finde cultural", "que hacer este fin de semana", "que hacer en guatemala", "agenda cultural", "festival", "concierto",
             "exposicion", "feria", "teatro", "noche de los museos", "desfile",
             "este fin de semana", "actividades gratuitas", "entrada libre", "tardes de arte",
         ],
