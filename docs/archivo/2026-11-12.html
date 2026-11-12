@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diario de Pedro 2026-11-12</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f3ec;--paper:#fffdf8;--ink:#1b1a17;--muted:#6b665c;--rule:#d9d3c5;--accent:#b3261e;--alert-bg:#fdf0e6;--alert-bd:#e0864a;--soft:#f3efe4;--hl:#ffe08a;--ok:#2d6a4f;--bad:#b3261e;
+--c-gt:#1f5fa8;--c-fut:#b3261e;--c-mundo:#2d6a4f;--c-cien:#5a3e9b;--c-local:#c26a00;--c-tse:#0b6e75;--c-cursos:#7a5c00;--c-eventos:#a1356a;--c-infra:#4a5568;--c-ovni:#3c7a3a;--c-estrenos:#8a2d8a;
+--c-bolsillo:#1d6b4a;--c-clima:#2a6f9e;--c-tec:#3b4a9e;--c-reco:#9a4b1c;--c-lectura:#6b4f2a;--c-buenas:#2f7d32;--c-cierre:#5c5470;--c-juegos:#8c3b5e;--c-entender:#1f5fa8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121110;--paper:#1c1b19;--ink:#ece8df;--muted:#a39d91;--rule:#36332e;--accent:#ff6b5e;--alert-bg:#2a1f17;--alert-bd:#c9773f;--soft:#24221f;--hl:#6b5a1e;--ok:#7fc8a3;--bad:#ff7a6e;
+--c-gt:#7fb0ec;--c-fut:#ff7a6e;--c-mundo:#7fc8a3;--c-cien:#b49ce8;--c-local:#f0a54a;--c-tse:#5cc4cc;--c-cursos:#d9b84a;--c-eventos:#e889b6;--c-infra:#a9b4c4;--c-ovni:#8fd08c;--c-estrenos:#d88ad8;
+--c-bolsillo:#6fcf9f;--c-clima:#7cc0ec;--c-tec:#a3adf0;--c-reco:#eb9a6a;--c-lectura:#d4b483;--c-buenas:#8fd492;--c-cierre:#bdb3d9;--c-juegos:#e892b8;--c-entender:#7fb0ec;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121110;--paper:#1c1b19;--ink:#ece8df;--muted:#a39d91;--rule:#36332e;--accent:#ff6b5e;--alert-bg:#2a1f17;--alert-bd:#c9773f;--soft:#24221f;--hl:#6b5a1e;--ok:#7fc8a3;--bad:#ff7a6e;
+--c-gt:#7fb0ec;--c-fut:#ff7a6e;--c-mundo:#7fc8a3;--c-cien:#b49ce8;--c-local:#f0a54a;--c-tse:#5cc4cc;--c-cursos:#d9b84a;--c-eventos:#e889b6;--c-infra:#a9b4c4;--c-ovni:#8fd08c;--c-estrenos:#d88ad8;
+--c-bolsillo:#6fcf9f;--c-clima:#7cc0ec;--c-tec:#a3adf0;--c-reco:#eb9a6a;--c-lectura:#d4b483;--c-buenas:#8fd492;--c-cierre:#bdb3d9;--c-juegos:#e892b8;--c-entender:#7fb0ec;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.55}
+.wrap{max-width:1100px;margin:0 auto;padding:20px 16px 48px;background:var(--paper);min-height:100vh}
+header{text-align:center;border-bottom:3px double var(--ink);padding-bottom:12px;margin-bottom:18px}
+.meta{display:flex;justify-content:space-between;font:500 12px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:8px;margin-bottom:10px;gap:8px;flex-wrap:wrap}
+h1.mast{font:900 clamp(38px,9vw,76px)/1 "Playfair Display",Georgia,serif;margin:6px 0 4px;letter-spacing:-.01em}
+.tag{font-style:italic;color:var(--muted);margin:0}
+.alert{background:var(--alert-bg);border-left:5px solid var(--alert-bd);padding:14px 16px;margin:0 0 22px;border-radius:4px}
+.alert h2{font:700 13px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--alert-bd);margin:0 0 6px}
+.alert p{margin:6px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:26px 30px}
+section{border-top:2px solid var(--ink);padding-top:10px;min-width:0;scroll-margin-top:12px}
+.kicker{font:700 12px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;margin:0 0 10px;color:var(--c)}
+article{padding:0 0 14px;margin:0 0 14px;border-bottom:1px solid var(--rule)}
+article:last-child{border-bottom:0;margin-bottom:0}
+article h3{font:700 21px/1.2 "Playfair Display",Georgia,serif;margin:0 0 6px}
+section.lead,section.wide{grid-column:1/-1}
+section.lead article:first-of-type h3{font-size:clamp(26px,4.5vw,36px)}
+article p{margin:0 0 6px}
+a.src{font:500 13px Inter,system-ui,sans-serif;color:var(--c);text-decoration:none}
+a.src:hover{text-decoration:underline}
+footer{margin-top:34px;border-top:3px double var(--ink);padding-top:12px;font-size:14px;color:var(--muted)}
+footer h2{font:700 12px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--ink)}
+footer ul{padding-left:18px;margin:6px 0}
+footer a{color:var(--muted)}
+.frase{text-align:center;max-width:46rem;margin:0 auto 22px;padding:4px 8px 18px;border-bottom:1px solid var(--rule)}
+.frase blockquote{margin:0;font:italic 600 clamp(20px,3vw,26px)/1.35 "Source Serif 4",Georgia,serif;text-wrap:balance}
+.frase cite{display:block;margin-top:8px;font:500 13px Inter,system-ui,sans-serif;font-style:normal;color:var(--muted);letter-spacing:.04em}
+nav.indice{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;margin:0 0 24px;font:500 13px Inter,system-ui,sans-serif}
+nav.indice a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--c);padding-bottom:1px}
+nav.indice a:hover,nav.indice a:focus-visible{color:var(--c)}
+section.entender{background:var(--soft);border-top:4px solid var(--c);padding:14px 18px 6px}
+section.entender h3{font:700 clamp(22px,3.5vw,28px)/1.2 "Playfair Display",Georgia,serif;margin:0 0 10px}
+section.entender .cols{columns:2 300px;column-gap:30px}
+section.entender .cols p{margin:0 0 10px;break-inside:avoid}
+.datos{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:0 0 12px}
+.dato{border:1px solid var(--rule);border-radius:4px;padding:8px 10px}
+.dato b{display:block;font:700 20px Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.dato span{font:500 12px Inter,system-ui,sans-serif;color:var(--muted)}
+.reco .tipo{font:700 11px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--c)}
+details{margin:6px 0 0}
+summary{cursor:pointer;font:500 13px Inter,system-ui,sans-serif;color:var(--c)}
+.juegos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px 30px}
+.game{min-width:0}
+.game h3{font:700 21px/1.2 "Playfair Display",Georgia,serif;margin:0 0 4px}
+.hint{font:500 13px Inter,system-ui,sans-serif;color:var(--muted);margin:0 0 8px}
+.sudoku{display:grid;grid-template-columns:repeat(9,1fr);width:min(100%,360px);aspect-ratio:1;border:2px solid var(--ink)}
+.sudoku input{width:100%;height:100%;min-width:0;border:1px solid var(--rule);background:var(--paper);color:var(--c-gt);text-align:center;font:600 clamp(16px,4.5vw,20px) Inter,system-ui,sans-serif;padding:0;border-radius:0}
+.sudoku input[readonly]{color:var(--ink);background:var(--soft)}
+.sudoku input:nth-child(9n+3),.sudoku input:nth-child(9n+6){border-right:2px solid var(--ink)}
+.sudoku input:nth-child(n+19):nth-child(-n+27),.sudoku input:nth-child(n+46):nth-child(-n+54){border-bottom:2px solid var(--ink)}
+.sudoku input:focus-visible{outline:2px solid var(--c);outline-offset:-2px}
+.sudoku input.bad{color:var(--bad);background:var(--alert-bg)}
+.ws{display:grid;grid-template-columns:repeat(var(--n),1fr);width:min(100%,380px);border:1px solid var(--rule)}
+.wc{aspect-ratio:1;border:0;background:transparent;color:var(--ink);font:600 clamp(13px,3.6vw,17px) Inter,system-ui,sans-serif;padding:0;cursor:pointer;min-width:0}
+.wc.on{background:var(--hl)}
+.wc.sol{box-shadow:inset 0 0 0 2px var(--c)}
+.wc:focus-visible{outline:2px solid var(--c);outline-offset:-2px}
+.wlist{display:flex;flex-wrap:wrap;gap:4px 14px;list-style:none;padding:0;margin:10px 0 0;font:600 13px Inter,system-ui,sans-serif;letter-spacing:.06em}
+.gbtns{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.gbtns button{font:700 13px Inter,system-ui,sans-serif;background:var(--ink);color:var(--paper);border:0;border-radius:4px;padding:8px 14px;cursor:pointer}
+.gbtns button:focus-visible{outline:2px solid var(--c);outline-offset:2px}
+:root{--t1:#fbf7ee;--t2:#f5eddf;--t3:#f9f3e8;--t4:#f2e8d7;--wood:#a88a63;--trule:#e0d4c0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--t1:#201e1a;--t2:#25221d;--t3:#1e1c18;--t4:#29251f;--wood:#9c8160;--trule:#3d362c}}
+:root[data-theme="dark"]{--t1:#201e1a;--t2:#25221d;--t3:#1e1c18;--t4:#29251f;--wood:#9c8160;--trule:#3d362c}
+main.grid>section{border-top:4px solid var(--wood);padding:12px 16px 14px;border-radius:0 0 6px 6px}
+main.grid>section:nth-child(4n+1){background:var(--t1)}
+main.grid>section:nth-child(4n+2){background:var(--t2)}
+main.grid>section:nth-child(4n+3){background:var(--t3)}
+main.grid>section:nth-child(4n+4){background:var(--t4)}
+main.grid>section article{border-bottom-color:var(--trule)}
+.ilus{display:block;width:100%;max-width:100%;height:auto;margin:0 0 12px;border-radius:6px}
+.pie{font:500 12px Inter,system-ui,sans-serif;color:var(--muted);margin:-6px 0 12px}
+.marcador{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px 10px;background:var(--ink);color:var(--paper);border-radius:6px;padding:14px 12px 10px;margin:0 0 14px}
+.marcador .eq{text-align:center;font:700 13px Inter,system-ui,sans-serif;letter-spacing:.02em;min-width:0;overflow-wrap:anywhere}
+.marcador .eq small{display:block;font:500 11px Inter,system-ui,sans-serif;opacity:.75;letter-spacing:0}
+.marcador .esc{display:inline-block;width:14px;height:14px;border-radius:50%;margin:0 0 4px;border:2px solid var(--paper)}
+.marcador .vs{font:900 24px "Playfair Display",Georgia,serif}
+.marcador .info{grid-column:1/-1;text-align:center;font:500 12px Inter,system-ui,sans-serif;opacity:.85;border-top:1px solid color-mix(in srgb,var(--paper) 30%,transparent);padding-top:8px}
+.tabla-wrap{overflow-x:auto;margin:0 0 14px}
+table.tabla{width:100%;border-collapse:collapse;font:500 13px Inter,system-ui,sans-serif;font-variant-numeric:tabular-nums}
+.tabla th{font:700 10px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);text-align:right;padding:4px 5px;border-bottom:2px solid var(--wood)}
+.tabla td{padding:4px 5px;text-align:right;border-bottom:1px solid var(--trule)}
+.tabla td:nth-child(2),.tabla th:nth-child(2){text-align:left}
+.tabla td:last-child{font-weight:700}
+.tabla tr.dir td:first-child{box-shadow:inset 4px 0 0 var(--c-mundo)}
+.tabla tr.rep td:first-child{box-shadow:inset 4px 0 0 var(--c-clima)}
+.tabla tr.yo td{background:color-mix(in srgb,var(--c) 14%,transparent);font-weight:700}
+.tabla caption{caption-side:bottom;text-align:left;font:500 11px Inter,system-ui,sans-serif;color:var(--muted);padding-top:6px}
+.tabla caption i{display:inline-block;width:10px;height:10px;vertical-align:-1px;margin:0 3px 0 8px}
+ol.agenda{list-style:none;margin:0 0 6px;padding:0;display:grid;gap:10px}
+ol.agenda li{display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:start}
+ol.agenda .dia{font:700 10px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.06em;text-align:center;border:1px solid var(--wood);border-radius:4px;padding:4px 2px;line-height:1.15}
+ol.agenda .dia b{display:block;font:900 22px "Playfair Display",Georgia,serif;letter-spacing:0}
+ol.agenda li.hoy .dia{background:var(--c);color:var(--paper);border-color:var(--c)}
+ol.agenda p{margin:0;font-size:15px;line-height:1.45}
+ol.agenda strong{font:700 14px Inter,system-ui,sans-serif}
+.clima-hoy{display:flex;align-items:center;gap:14px;margin:0 0 12px}
+.clima-hoy svg{width:84px;height:auto;flex:none}
+.clima-hoy b{display:block;font:900 40px/1 "Playfair Display",Georgia,serif}
+.clima-hoy span{font:500 12px Inter,system-ui,sans-serif;color:var(--muted)}
+.relleno{margin-top:16px;padding:12px 14px;border:1px dashed var(--wood);border-radius:6px;background:var(--paper)}
+.relleno .tipo{font:700 10px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--wood);margin:0 0 4px}
+.relleno h4{font:700 18px/1.25 "Playfair Display",Georgia,serif;margin:0 0 4px;text-wrap:balance}
+.relleno p{margin:0;font-size:15px;line-height:1.45}
+.relleno .num{font:900 44px/1 "Playfair Display",Georgia,serif;color:var(--wood);margin:2px 0 4px}
+.relleno svg{display:block;width:100%;height:auto}
+.breves-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:4px 26px}
+article.breve{padding:0 0 10px;margin:0 0 10px}
+article.breve .tipo{font:700 10px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--wood);margin:0 0 2px}
+article.breve p{font-size:15px;line-height:1.45;margin:0}
+article.breve b{font-family:"Playfair Display",Georgia,serif;font-size:16px}
+main.grid>section>article.breve{border-top:1px dashed var(--wood);padding-top:10px;border-bottom:0}
+.pausa{margin-top:26px}
+.pausa h3{font:700 21px/1.2 "Playfair Display",Georgia,serif;margin:0 0 4px}
+.pausa-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:10px}
+.pausa-grid .relleno{margin:0}
+.tend{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 24px;margin:0 0 14px}
+.tend h4{font:700 11px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 6px}
+.tend ol{margin:0;padding-left:22px;font-size:15px;line-height:1.4}
+.tend li{margin:0 0 6px}
+.tend li b{font-family:Inter,system-ui,sans-serif;font-size:14px}
+.tend li span{display:block;font-size:13px;color:var(--muted)}
+.wd{display:grid;gap:5px;width:min(100%,280px)}
+.wd-row{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.wd-row span{aspect-ratio:1;border:2px solid var(--rule);display:grid;place-items:center;font:700 22px Inter,system-ui,sans-serif;background:var(--paper)}
+.wd-row span.ok{background:#3f8f4f;border-color:#3f8f4f;color:#fff}
+.wd-row span.casi{background:#c9a227;border-color:#c9a227;color:#fff}
+.wd-row span.x{background:var(--muted);border-color:var(--muted);color:var(--paper)}
+.wd-in,.anag input{font:600 16px Inter,system-ui,sans-serif;padding:7px 10px;border:1px solid var(--wood);border-radius:4px;background:var(--paper);color:var(--ink);text-transform:uppercase;width:10em;max-width:100%}
+.anag{padding-left:22px;margin:0;display:grid;gap:12px}
+.anag li{display:grid;gap:3px;justify-items:start}
+.anag .mezcla{font:700 18px Inter,system-ui,sans-serif;letter-spacing:.18em}
+.anag .hint{margin:0}
+.anag input.good{border-color:var(--ok);box-shadow:inset 0 0 0 1px var(--ok)}
+.anag input.bad,.cr-l input.bad{border-color:var(--bad);color:var(--bad)}
+.cripto{display:flex;flex-wrap:wrap;gap:12px 18px}
+.cr-pal{display:inline-flex;gap:3px;flex-wrap:wrap}
+.cr-l{display:grid;justify-items:center;gap:2px}
+.cr-l b{font:600 12px Inter,system-ui,sans-serif;color:var(--muted)}
+.cr-l input{width:24px;height:30px;text-align:center;font:700 16px Inter,system-ui,sans-serif;border:0;border-bottom:2px solid var(--ink);background:transparent;color:var(--c-gt);padding:0;text-transform:uppercase;border-radius:0}
+.cr-l input[readonly]{color:var(--ink)}
+.cr-l input:focus-visible{outline:2px solid var(--c);outline-offset:1px}
+.cr-p{align-self:end;font:700 16px Inter,system-ui,sans-serif;padding-bottom:4px}
+.pausa-grid{grid-template-columns:1fr}
+@media (min-width:480px){.pausa-grid{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:760px){.pausa-grid{grid-template-columns:repeat(3,1fr)}}
+.minuto{grid-column:1/-1;padding:16px 18px;border:1px solid var(--wood);border-radius:6px;background:var(--paper)}
+.minuto .tipo{font:700 10px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--wood);margin:0 0 4px}
+.minuto h4{font:700 22px/1.2 "Playfair Display",Georgia,serif;margin:0 0 8px}
+.minuto .texto{columns:2 280px;column-gap:28px}
+.minuto .texto p{margin:0 0 8px;font-size:16px;line-height:1.6}
+.minuto .moraleja{font-style:italic;color:var(--muted);margin:4px 0 0}
+ol.efem{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:10px}
+ol.efem li{display:grid;grid-template-columns:56px 1fr;gap:10px;align-items:baseline}
+ol.efem .anio{font:900 19px "Playfair Display",Georgia,serif;color:var(--c)}
+ol.efem p{margin:0}
+.efem-cab{display:flex;gap:14px;align-items:center;margin:0 0 6px}
+.efem-cab svg{width:64px;height:auto;flex:none}
+
+/* ===== Prueba: diario por páginas ===== */
+.paginas{display:grid;gap:22px}
+.pag{border-top:4px solid var(--wood);border-radius:0 0 6px 6px;padding:10px 18px 16px;min-width:0;scroll-margin-top:12px}
+.pag:nth-of-type(4n+1){background:var(--t1)}
+.pag:nth-of-type(4n+2){background:var(--t2)}
+.pag:nth-of-type(4n+3){background:var(--t3)}
+.pag:nth-of-type(4n+4){background:var(--t4)}
+.pag-cab{display:flex;align-items:baseline;gap:12px;border-bottom:1px solid var(--trule);padding-bottom:6px;margin-bottom:12px;flex-wrap:wrap}
+.pag-num{font:700 11px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--wood)}
+.pag-cab h2{font:900 clamp(24px,3.4vw,32px)/1.1 "Playfair Display",Georgia,serif;margin:0;color:var(--ink)}
+.pag-cab .lema{font:500 12px Inter,system-ui,sans-serif;color:var(--muted);margin-left:auto}
+.flujo{columns:3 260px;column-gap:28px;column-rule:1px solid var(--trule)}
+.flujo.dos{columns:2 300px}
+.flujo>*{break-inside:avoid;-webkit-column-break-inside:avoid}
+.flujo article{border-bottom:1px solid var(--trule);padding:0 0 12px;margin:0 0 12px}
+.flujo article.breve{border-bottom:1px dashed var(--trule);padding:0 0 10px;margin:0 0 10px}
+.flujo .bloque{margin:0 0 14px;padding:0 0 12px;border-bottom:1px solid var(--trule)}
+.flujo .bloque:last-child{border-bottom:0}
+.sub{margin-top:16px;padding-top:12px;border-top:2px solid var(--wood)}
+.sub:first-of-type{margin-top:0;padding-top:0;border-top:0}
+.sub-t{font:700 12px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--c);margin:0 0 10px}
+.mini-t{font:700 11px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--c);margin:0 0 6px}
+.pag .kicker{display:none}
+.lista-cine{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.lista-cine li{display:flex;justify-content:space-between;gap:10px;font-size:15px;border-bottom:1px dotted var(--trule);padding:3px 0}
+.lista-cine li span{font:500 11px Inter,system-ui,sans-serif;color:var(--muted);white-space:nowrap}
+.lista-cine li em{font-style:normal;font:600 10px Inter,system-ui,sans-serif;color:var(--wood);text-transform:uppercase;letter-spacing:.08em}
+.obra{display:grid;gap:8px}
+.obra svg{width:100%;height:auto;border-radius:6px;display:block}
+.indice-pag{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;margin:0 0 22px;font:500 13px Inter,system-ui,sans-serif}
+.indice-pag a{color:var(--ink);text-decoration:none;border-bottom:2px solid var(--wood);padding-bottom:1px}
+.indice-pag a b{color:var(--wood);margin-right:4px}
+.indice-pag a:hover,.indice-pag a:focus-visible{color:var(--wood)}
+.pag .relleno{margin:0 0 12px}
+.trivias{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:16px}
+.trivias .relleno{margin:0}
+.pag .tend{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px 28px}
+.pag .tend .hint{margin:12px 0 0;padding-top:8px;border-top:1px dotted var(--trule)}
+.pag.entender{background:var(--soft)}
+/* Texto corrido entre columnas, como en el periódico: así las columnas quedan parejas */
+.flujo>*{break-inside:auto;-webkit-column-break-inside:auto}
+.flujo h3,.flujo h4,.flujo .tipo,.flujo .mini-t,.flujo .efem-cab{break-after:avoid}
+.flujo p{orphans:2;widows:2}
+.flujo h3,.flujo h4{break-inside:avoid}
+.minuto.ancho{padding:16px 18px}
+.flujo .ancho{column-span:all;-webkit-column-span:all;break-inside:avoid;margin:4px 0 14px;padding:14px 0 0;border-top:1px solid var(--trule)}
+.flujo .ancho:last-child{margin-bottom:0}
+.obra-h{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:18px;align-items:start}
+@media (max-width:640px){.obra-h{grid-template-columns:1fr}}
+.obra-h .texto{columns:2 240px;column-gap:24px}
+.obra-h .texto p{margin:0 0 8px}
+.flujo svg,.flujo .marcador,.flujo .tabla-wrap,.flujo .datos,.flujo .clima-hoy,.flujo li,.flujo .relleno,.flujo details{break-inside:avoid;-webkit-column-break-inside:avoid}
+.pag.entender .flujo>*{break-inside:auto}
+.lista-cine.cols3{display:block;columns:3 220px;column-gap:28px}
+.lista-cine.cols3 li{break-inside:avoid}
+.juegos-der{display:grid;gap:12px;align-content:start}
+.juegos-der .trivias{grid-template-columns:1fr;margin-top:6px}
+.tabla.obras td,.tabla.obras th{text-align:left;vertical-align:top}
+.tabla.obras td:last-child{font-weight:500;white-space:nowrap;color:var(--muted)}
+/* Hoy en 5 minutos */
+.hoy5{margin:0 0 22px;background:var(--t1);border:1px solid var(--trule);border-top:4px solid var(--ink);border-radius:0 0 8px 8px;padding:12px 18px 16px}
+.hoy5-cab{display:flex;align-items:baseline;justify-content:space-between;gap:4px 12px;flex-wrap:wrap;border-bottom:1px solid var(--trule);padding-bottom:8px;margin-bottom:14px}
+.hoy5-cab h2{font:900 clamp(22px,3vw,28px)/1.1 "Playfair Display",Georgia,serif;margin:0;text-wrap:balance}
+.hoy5-cab span{font:500 12px Inter,system-ui,sans-serif;color:var(--muted)}
+ol.hoy5-l{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px 22px}
+ol.hoy5-l li{border-top:3px solid var(--c);padding-top:8px;min-width:0}
+ol.hoy5-l a{display:grid;grid-template-columns:auto 1fr;column-gap:10px;row-gap:2px;align-items:start;color:var(--ink);text-decoration:none}
+ol.hoy5-l .n{grid-row:span 3;font:900 36px/.9 "Playfair Display",Georgia,serif;color:var(--c);font-variant-numeric:lining-nums}
+ol.hoy5-l .pg{font:700 10px Inter,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--c);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ol.hoy5-l b{font:700 16px/1.25 "Playfair Display",Georgia,serif;text-wrap:balance}
+ol.hoy5-l .t{font-size:14px;line-height:1.4;color:var(--muted)}
+ol.hoy5-l a:hover b,ol.hoy5-l a:focus-visible b{text-decoration:underline;text-decoration-color:var(--c);text-underline-offset:3px}
+ol.hoy5-l a:focus-visible{outline:2px solid var(--c);outline-offset:4px;border-radius:2px}
+
+.pie{font:500 12px Inter,system-ui,sans-serif;color:var(--muted)}
+.flujo>article{break-inside:avoid;-webkit-column-break-inside:avoid}
+</style></head><body>
+<div class="wrap">
+<header>
+  <div class="meta"><span>Ciudad de Guatemala</span><span>Jueves 12 de noviembre de 2026</span><span>Edición diaria</span></div>
+  <h1 class="mast">El Diario de Pedro</h1>
+  <p class="tag">Lo que importa hoy, sin el ruido de las redes</p>
+</header>
+<div class="frase"><blockquote>“No por mucho madrugar amanece más temprano.”</blockquote><cite>Refrán popular</cite></div>
+
+<nav class="indice-pag" aria-label="Páginas de hoy"><a href="#guatemala"><b>1</b>Nacionales</a><a href="#analisis"><b>2</b>Para leer con calma</a><a href="#mundo"><b>3</b>Internacionales</a><a href="#deportes"><b>4</b>Deportes</a><a href="#ciencia"><b>5</b>Ciencia y tecnología</a><a href="#datos"><b>6</b>El día en datos</a><a href="./">Archivo</a></nav>
+<main class="paginas">
+<section class="pag" id="guatemala" style="--c:var(--c-gt)"><div class="pag-cab"><span class="pag-num">Página 1</span><h2>Noticias nacionales</h2><span class="lema">Lo más importante del país</span></div><div class="flujo"><article><h3>Así saldrá la Bicolor para enfrentar a Canadá en los cuartos de final de la Nations League</h3><p>El estadio El Trébol albergará este viernes el esperado encuentro</p><a class="src" href="https://www.publinews.gt/deportes/2026/11/12/asi-saldra-la-bicolor-para-enfrentar-a-canada-en-los-cuartos-de-final-de-la-nations-league/">Leer en Publinews →</a><span class="pie" style="margin:0 0 0 6px">10:21 a. m.</span></article><article><h3>Inversionistas internacionales ponen sus ojos en Guatemala para desarrollar carreteras y puertos</h3><p>Guatemala tiene potencial para atraer inversiones en infraestructura crítica, pero necesita generar confianza, certeza jurídica y reglas claras para impulsar proyectos de carreteras, puertos, telecomunicaciones y energía eléctrica, según se expuso durante un foro empresarial.</p><a class="src" href="https://www.prensalibre.com/economia/inversion-en-guatemala-empresarios-piden-certeza-juridica-y-reglas-claras-para-desarrollar-carreteras-puertos-telecomunicaciones-y-energia/">Leer en Prensa Libre →</a><span class="pie" style="margin:0 0 0 6px"></span></article><article><h3>¿El abogado de los hermanos Choc Toz participará en las Elecciones 2027? Esto responde</h3><p>En redes sociales surgieron comentarios sobre una posible candidatura del abogado Karlos de León, defensor de los hermanos Choc Toz, para un cargo de elección popular en los comicios de 2027. Ante las versiones, el profesional emitió un pronunciamiento.</p><a class="src" href="https://lahora.gt/nacionales/hloarca/2026/11/12/el-abogado-de-los-hermanos-choc-toz-participara-en-las-elecciones-2027-esto-responde-now/">Leer en La Hora →</a><span class="pie" style="margin:0 0 0 6px">10:05 a. m.</span></article><article><h3>Guatemala registra dos temblores en pocas horas: Insivumeh informa sobre sus epicentros y profundidades</h3><p>El Insivumeh informó sobre dos temblores registrados este jueves 12 de noviembre.</p><a class="src" href="https://www.prensalibre.com/guatemala/comunitario/guatemala-registra-dos-temblores-en-pocas-horas-insivumeh-informa-sobre-sus-epicentros-y-profundidades-breaking/">Leer en Prensa Libre →</a><span class="pie" style="margin:0 0 0 6px">10:57 a. m.</span></article><article><h3>Camión derrama concreto a lo largo de una cuadra en la avenida Petapa</h3><p>Equipos de limpieza y agentes de la Policía Municipal de Tránsito trabajan en el sector para retirar el material</p><a class="src" href="https://www.publinews.gt/noticias/2026/11/12/camion-derrama-concreto-a-lo-largo-de-una-cuadra-en-la-avenida-petapa/">Leer en Publinews →</a><span class="pie" style="margin:0 0 0 6px">8:06 a. m.</span></article></div><div class="sub" style="--c:var(--c-infra)"><p class="sub-t">Cortitas</p><div class="flujo"><article class="breve"><p class="tipo">Cortita · Prensa Libre</p><p><b>CC aclara al Congreso que no exige peritajes para verificar firmas de reformas constitucionales</b> <a class="src" href="https://www.prensalibre.com/guatemala/cc-aclara-al-congreso-que-no-exige-peritajes-para-verificar-firmas-de-reformas-constitucionales/">Leer →</a></p></article><article class="breve"><p class="tipo">Cortita · Prensa Libre</p><p><b>“En Xela urge una estrategia de desarrollo departamental a largo plazo”</b> <a class="src" href="https://www.prensalibre.com/guatemala/guatemala-no-se-detiene/en-xela-urge-una-estrategia-de-desarrollo-departamental-a-largo-plazo/">Leer →</a></p></article><article class="breve"><p class="tipo">Cortita · Prensa Libre</p><p><b>MetroRiel en Guatemala: Arévalo sanciona la ley que permitirá implementar el tren de pasajeros</b> <a class="src" href="https://www.prensalibre.com/guatemala/comunitario/metroriel-en-guatemala-arevalo-sanciona-la-ley-que-permitira-implementar-el-tren-de-pasajeros-breaking/">Leer →</a></p></article><article class="breve"><p class="tipo">Cortita · La Hora</p><p><b>Retransmisión: A un año de ser solicitada, interpelación al ministro de Desarrollo Social continúa en el Congreso</b> <a class="src" href="https://lahora.gt/nacionales/hgodinez/2026/11/12/retransmision-a-un-ano-de-ser-solicitada-interpelacion-al-ministro-de-desarrollo-social-continua-en-el-congreso/">Leer →</a></p></article><article class="breve"><p class="tipo">Cortita · Prensa Libre</p><p><b>Rescatan con vida a un adolescente en Australia que estuvo 6 días perdido en una zona boscosa</b> <a class="src" href="https://www.prensalibre.com/internacional/bbc-news-mundo-internacional/rescatan-con-vida-a-un-adolescente-en-australia-que-estuvo-6-dias-perdido-en-una-zona-boscosa/">Leer →</a></p></article><article class="breve"><p class="tipo">Cortita · Infobae</p><p><b>La Comisión de Economía del Congreso de Guatemala revisa las enmiendas a la ley contra la usura antes de enviarla al pleno</b> <a class="src" href="https://www.infobae.com/guatemala/2026/11/12/la-comision-de-economia-del-congreso-de-guatemala-revisa-las-enmiendas-a-la-ley-contra-la-usura-antes-de-enviarla-al-pleno/">Leer →</a></p></article></div></div></section><section class="pag" id="analisis" style="--c:var(--c-entender)"><div class="pag-cab"><span class="pag-num">Página 2</span><h2>Para leer con calma</h2><span class="lema">Reportajes e investigación</span></div><div class="flujo"><article><h3>Reino Unido sobre el MetroRiel: «Hay que empezar a hacer compras públicas de una forma completamente distinta»</h3><p>Juliana Correa, embajadora del Reino Unido, y Jessica Morden, enviada comercial británica para Centroamérica, explican qué papel tendrá su país en el MetroRiel de Guatemala, por qué hizo falta una ley especial para construirlo y qué pasará con la obra después de las elecciones…</p><a class="src" href="https://plazapublica.com.gt/politica/entrevista/reino-unido-sobre-el-metroriel-hay-que-empezar-a-hacer-compras-publicas-de-una-forma-completamente-distinta/">Leer en Plaza Pública →</a><span class="pie" style="margin:0 0 0 6px">8:32 a. m.</span></article><article><h3>Guatemala 2027: el voto como poder ciudadano y su dilema</h3><p>«No es solo el dinero lo que ha corrompido nuestra política. Es una corrupción moral: la indiferencia cínica de las personas poderosas.» Jon Osoff, Senador de Georgia, Estados Unidos.</p><a class="src" href="https://plazapublica.com.gt/opinion/editorial/guatemala-2027-el-poder-ciudadano-y-su-dilema/">Leer en Plaza Pública →</a><span class="pie" style="margin:0 0 0 6px"></span></article><article><h3>Cruz Chich: El «sueño americano» que se desvanece en la ilusión de una casa grande</h3><p>En la aldea Cruz Chich, Joyabaj, Quiché, las grandes viviendas, al estilo de los suburbios estadounidenses, son la evidencia de haber logrado el «sueño americano». Pero, solo en 2026, más de mil personas originarias de ese municipio han sido retornadas al país.</p><a class="src" href="https://plazapublica.com.gt/migracion/reportaje/cruz-chich-el-sueno-americano-que-se-desvanece-en-la-ilusion-de-una-casa-grande/">Leer en Plaza Pública →</a><span class="pie" style="margin:0 0 0 6px"></span></article></div></section><section class="pag" id="mundo" style="--c:var(--c-mundo)"><div class="pag-cab"><span class="pag-num">Página 3</span><h2>Internacionales</h2><span class="lema">Lo que pasa afuera</span></div><div class="flujo"><article><h3>&quot;El papa León XIV es mi padrino de bautizo&quot;: la insólita historia de Mildred Camacho, la joven peruana que es ahijada del Sumo Pontífice</h3><p>Hace 30 años, el joven sacerdote Robert Prevost Martínez aceptó ser el padrino de bautismo de una niña en Chulucanas, en la región de Piura. Ahora ella espera con ansiedad su visita a Perú como el papa León XIV.</p><a class="src" href="https://www.bbc.com/mundo/articles/cqly3jpmvvl9o?at_medium=RSS&amp;at_campaign=rss">Leer en BBC Mundo →</a><span class="pie" style="margin:0 0 0 6px">7:37 a. m.</span></article><article><h3>Al menos 1 muerto y 4 heridos en un tiroteo en un gimnasio en Washington DC</h3><p>Los equipos de emergencia se desplegaron en el barrio de Logan Circle, un par de kilómetros al norte de la Casa Blanca.</p><a class="src" href="https://www.bbc.com/mundo/articles/cq8j47lw9nmwo?at_medium=RSS&amp;at_campaign=rss">Leer en BBC Mundo →</a><span class="pie" style="margin:0 0 0 6px">9:14 a. m.</span></article><article><h3>4 claves del escándalo de los supuestos &quot;sexocontratos&quot; por el que se investiga al expresidente de Colombia Gustavo Petro</h3><p>Una mujer acusa al expresidente de haberle conseguido contratos con el estado a cambio de favores sexuales.</p><a class="src" href="https://www.bbc.com/mundo/articles/cr3wg62qwjz9o?at_medium=RSS&amp;at_campaign=rss">Leer en BBC Mundo →</a><span class="pie" style="margin:0 0 0 6px">5:59 a. m.</span></article><article><h3>¿Por qué mi familia blanca nunca me dijo que yo era negra?</h3><p>Lacey Tezino fue criada como una niña blanca en un pueblo rural de Texas conocido por su pasado racista. Por eso, se sorprendió al descubrir que en realidad era negra.</p><a class="src" href="https://www.bbc.com/mundo/articles/c6x2enpm544zo?at_medium=RSS&amp;at_campaign=rss">Leer en BBC Mundo →</a><span class="pie" style="margin:0 0 0 6px">5:19 a. m.</span></article><article><h3>Conversaciones a tres bandas entre Ucrania, Estados Unidos y Rusia en Abu Dabi: ¿han aportado realmente algo a Kiev?</h3><p>Las primeras conversaciones trilaterales entre Ucrania, Estados Unidos y Rusia en nueve meses terminaron con un acuerdo sobre el intercambio de prisioneros. ¿Se puede considerar un éxito y un paso hacia la paz?</p><a class="src" href="https://www.dw.com/es/conversaciones-a-tres-bandas-entre-ucrania-estados-unidos-y-rusia-en-abu-dabi-¿han-aportado-realmente-algo-a-kiev/a-79933391?maca=spa-rss-sp-all-1122-xml-mrss">Leer en DW →</a><span class="pie" style="margin:0 0 0 6px">10:45 a. m.</span></article></div></section><section class="pag" id="deportes" style="--c:var(--c-fut)"><div class="pag-cab"><span class="pag-num">Página 4</span><h2>Deportes</h2><span class="lema">Nacional e internacional</span></div><div class="flujo"><article><h3>Guatemala vs. Canadá en la Liga de Naciones: ¿Podrá la Azul y Blanco dar el golpe en El Trébol?</h3><p>A pesar de la dificultad, la selección de Guatemala debe luchar intensamente en casa para evitar llegar al partido de vuelta en Canadá bajo presión.</p><a class="src" href="https://www.prensalibre.com/deportes/futbol-nacional/guatemala-vs-canada-en-la-liga-de-naciones-podra-la-azul-y-blanco-dar-el-golpe-en-el-trebol/">Leer en Prensa Libre →</a><span class="pie" style="margin:0 0 0 6px">11:08 a. m.</span></article><article><h3>“Guatemala es un rival muy difícil”: Jesse Marsch habla antes de visitar El Trébol</h3><p>Canadá encara con respeto su visita a Guatemala, consciente de la dificultad que representa la Azul y Blanco en los cuartos de final de la Liga de Naciones.</p><a class="src" href="https://www.prensalibre.com/deportes/futbol-nacional/guatemala-es-un-rival-muy-dificil-jesse-marsch-habla-antes-de-visitar-el-trebol/">Leer en Prensa Libre →</a><span class="pie" style="margin:0 0 0 6px"></span></article><article><h3>La Selección de Guatemala prepara un amistoso de lujo</h3><p>GUATEMALA – El combinado nacional ya está planificando el 2027. La Federación de Futbol de Guatemala está a pocos detalles de concretar un amistoso de la Selección Nacional para el 2027, el cual sería ante su similar de México con el que se iniciará la preparación del próximo…</p><a class="src" href="https://guatefutbol.com/2026/11/12/la-seleccion-de-guatemala-prepara-un-amistoso-de-lujo/">Leer en Guatefutbol →</a><span class="pie" style="margin:0 0 0 6px">11:11 a. m.</span></article><article><h3>Omar Duarte asegura que se mantiene viva la ilusión en Comunicaciones</h3><p>GUATEMALA. Tras vencer de visita a Marquense, el delantero crema aseguró que el plantel luchará hasta el final por un boleto a la Fase Final del Apertura 2026.</p><a class="src" href="https://guatefutbol.com/2026/11/11/omar-duarte-asegura-que-se-mantiene-viva-la-ilusion-en-comunicaciones/">Leer en Guatefutbol →</a><span class="pie" style="margin:0 0 0 6px"></span></article><article><h3>Guatemala vs. Canadá: fecha, hora y dónde ver el partido de la Liga de Naciones de Concacaf</h3><p>La Bicolor busca dar el primer golpe ante Canadá y acercarse al anhelado Final Four de la Liga de Naciones.</p><a class="src" href="https://www.prensalibre.com/deportes/futbol-nacional/guatemala-vs-canada-fecha-hora-y-donde-ver-el-partido-de-la-liga-de-naciones-de-concacaf/">Leer en Prensa Libre →</a><span class="pie" style="margin:0 0 0 6px">10:58 a. m.</span></article><article><h3>El técnico de Canadá elogia a la Selección de Guatemala</h3><p>MÉXICO – Para el estratega de los canadienses no será un juego fácil en El Trébol. Jesse Marsch, entrenador de la Selección de Canadá, habló en conferencia en la concentración del equipo en México, en el que elogió el trabajo de Guatemala antes de sus partidos del 13 y 16 de…</p><a class="src" href="https://guatefutbol.com/2026/11/11/el-tecnico-de-canada-elogia-a-la-seleccion-de-guatemala/">Leer en Guatefutbol →</a><span class="pie" style="margin:0 0 0 6px"></span></article><article><h3>¿Qué pasa si Guatemala le gana a Canadá en la Liga de Naciones? El camino hacia la Copa Oro</h3><p>Si Guatemala supera a Canadá, avanzará, por primera vez en su historia, al Final Four de la Liga de Naciones, que se disputará en Los Ángeles, California.</p><a class="src" href="https://www.prensalibre.com/deportes/futbol-nacional/que-pasa-si-guatemala-le-gana-a-canada-en-la-liga-de-naciones-el-camino-hacia-la-copa-oro/">Leer en Prensa Libre →</a><span class="pie" style="margin:0 0 0 6px">9:52 a. m.</span></article></div></section><section class="pag" id="ciencia" style="--c:var(--c-cien)"><div class="pag-cab"><span class="pag-num">Página 5</span><h2>Ciencia y tecnología</h2><span class="lema">El espacio, descubrimientos y tecnología</span></div><div class="flujo"><article><h3>NASA’s CHAPEA Mars crew finally emerges after more than a year in isolation</h3><p>After more than a year of simulated life on Mars, four NASA volunteers have finally emerged from isolation, bringing a remarkable space exploration experiment to an end.</p><a class="src" href="https://www.sciencedaily.com/releases/2026/11/261109205406.htm">Leer en ScienceDaily (en inglés) →</a><span class="pie" style="margin:0 0 0 6px"></span></article><article><h3>El país sin mar que más se acerca a tener una costa: hizo el negocio del siglo al ceder un tramo de carretera a Ucrania antes de que llegara Rusia</h3><p>Cuando la Unión Soviética se desintegró en 1991, Moldavia se convirtió en un país independiente con un pequeño problema geográfico: tenía el mar Negro prácticamente a las puertas, pero carecía de litoral.</p><a class="src" href="https://www.xataka.com/magnet/pais-mar-que-se-acerca-a-tener-costa-hizo-negocio-siglo-al-ceder-tramo-carretera-a-ucrania-llegara-rusia">Leer en Xataka →</a><span class="pie" style="margin:0 0 0 6px">8:44 a. m.</span></article><article><h3>NASA’s Hubble Offers Cosmic Sampler of Targets for Roman</h3><p>A gallery of gravitational lenses captured by NASA’s Hubble Space Telescope showcases the diversity of this cosmic phenomenon and lays the groundwork for follow-up observations by the Nancy Grace Roman Space Telescope.</p><a class="src" href="https://science.nasa.gov/missions/hubble/nasas-hubble-offers-cosmic-sampler-of-targets-for-roman/">Leer en NASA (en inglés) →</a><span class="pie" style="margin:0 0 0 6px">7:18 a. m.</span></article><article><h3>Through NASA’s Lens: Capturing Space Shuttle Endeavour’s Move to LA</h3><p>As a new exhibit opens showcasing NASA’s space shuttle Endeavour, NASA photographers look back at the final mission. These photographers documented the iconic images shared around the world on Sept.</p><a class="src" href="https://www.nasa.gov/centers-and-facilities/armstrong/through-nasas-lens-capturing-space-shuttle-endeavours-move-to-la/">Leer en NASA (en inglés) →</a><span class="pie" style="margin:0 0 0 6px">7:00 a. m.</span></article><article><h3>Tras 40 días, fracasa en Valencia la segunda negociación por la vivienda y la acampada empieza a desalojarse</h3><p>La acampada por la vivienda de Valencia termina hoy. Después de 40 días, sus integrantes ya están retirando las tiendas de la plaza del Ayuntamiento . El motivo inmediato es que la segunda mesa con las administraciones, que exigían como condición para irse, no salió adelante.</p><a class="src" href="https://www.xataka.com/magnet/40-dias-fracasa-valencia-segunda-negociacion-vivienda-acampada-empieza-a-desalojarse">Leer en Xataka →</a><span class="pie" style="margin:0 0 0 6px">11:01 a. m.</span></article><article><h3>Nvidia busca CEO tras la salida de Jensen Huang: estos son los candidatos que suenan para el puesto</h3><p>Nvidia ha perdido al único director ejecutivo que ha tenido jamás. Jensen Huang ha dimitido este jueves como presidente, director ejecutivo y miembro del consejo de administración, y la empresa ahora tiene que encontrar a alguien para dirigir al fabricante de chips más valioso…</p><a class="src" href="https://www.xataka.com/empresas-y-economia/nvidia-busca-ceo-salida-jensen-huang-estos-candidatos-que-suenan-para-puesto">Leer en Xataka →</a><span class="pie" style="margin:0 0 0 6px">10:51 a. m.</span></article></div></section><section class="pag" id="datos" style="--c:var(--c-clima)"><div class="pag-cab"><span class="pag-num">Página 6</span><h2>El día en datos</h2><span class="lema">Clima, cambio, efemérides y búsquedas</span></div><div class="sub" style="--c:var(--c-clima)"><p class="sub-t">El clima en la zona 21</p><div class="datos"><div class="dato"><b>26° / 17°</b><span>Hoy · Llovizna</span></div><div class="dato"><b>100 %</b><span>Probabilidad de lluvia</span></div><div class="dato"><b>27° / 16°</b><span>Vie 13 · Llovizna ligera · 39 %</span></div><div class="dato"><b>27° / 15°</b><span>Sáb 14 · Neblina · 10 %</span></div><div class="dato"><b>28° / 16°</b><span>Dom 15 · Llovizna · 75 %</span></div></div><p class="hint">Pronóstico de Open-Meteo. Para alertas oficiales, Insivumeh y Conred.</p></div><div class="sub" style="--c:var(--c-bolsillo)"><p class="sub-t">Tipo de cambio</p><div class="datos"><div class="dato"><b>Q7.64878</b><span>por US$1 · referencia del Banguat, 12/11/2026</span></div></div></div><div class="sub" style="--c:var(--c-lectura)"><p class="sub-t">Un día como hoy</p><div class="efem-cab"><svg viewBox="0 0 64 70" role="img" aria-label="Hoja de calendario: 12 de noviembre"><rect x="2" y="8" width="60" height="60" rx="6" fill="var(--paper)" stroke="var(--wood)" stroke-width="2"/><rect x="2" y="8" width="60" height="18" rx="6" fill="var(--c)"/><rect x="2" y="20" width="60" height="6" fill="var(--c)"/><circle cx="18" cy="8" r="4" fill="var(--wood)"/><circle cx="46" cy="8" r="4" fill="var(--wood)"/><text x="32" y="21" text-anchor="middle" fill="var(--paper)" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="10" letter-spacing="1">NOV</text><text x="32" y="56" text-anchor="middle" fill="var(--ink)" font-family="Playfair Display, Georgia, serif" font-weight="900" font-size="26">12</text></svg><h3 style="font:700 21px/1.2 'Playfair Display',Georgia,serif;margin:0">Lo que pasó un 12 de noviembre</h3></div><ol class="efem"><li><span class="anio">1878</span><p>en los Estados Unidos, el presidente Rutherford B. Hayes emite el laudo arbitral sobre la región del Chaco Boreal delimitada por los ríos Paraguay, Pilcomayo y Verde, que resolvió la disputa de límites entre Argentina y Paraguay ocurrida luego de finalizada la guerra de la Triple Alianza.</p></li><li><span class="anio">2001</span><p>en Nueva York se reúnen por última vez los tres ex-Beatles sobrevivientes, Paul McCartney, Ringo Starr y George Harrison, a petición expresa de este último, quien fallecería 17 días después, el 29 de noviembre.</p></li><li><span class="anio">2020</span><p>en Estados Unidos se estrena la videoconsola de mesa PlayStation 5.</p></li></ol><p class="hint">De la Wikipedia en español.</p></div><div class="sub" style="--c:var(--accent)"><p class="sub-t">Lo que más busca Guatemala en Google</p><div class="tend"><div><ol><li><b>barcelona - arsenal</b><span>Team news: One change at Camp Nou (Arsenal.com). 2000+ <a class="src" href="https://www.arsenal.com/news/team-news-one-change-at-camp-nou-aqkEx2o6aPUk">→</a></span></li><li><b>turquía - bélgica</b><span>¿Por qué no ataja Thibaut Courtois hoy en Bélgica vs Turquía por la UEFA Nations League? (365Scores). 5000+ <a class="src" href="https://www.365scores.com/es/news/por-que-no-ataja-courtois-vs-turquia/">→</a></span></li><li><b>francia vs</b><span>Zidane confirma la ausencia de Mbappé contra Italia (MARCA). 200+ <a class="src" href="https://www.marca.com/futbol/nations-league/2026/11/11/zidane-confirma-ausencia-mbappe-italia.html">→</a></span></li><li><b>ghana - somalia</b><span>Ghana end three-year TotalEnergies CAF AFCON qualifying winless run with victory over Somalia (CAFOnline.com). 1000+ <a class="src" href="https://www.cafonline.com/afcon2025/news/ghana-end-three-year-totalenergies-caf-afcon-qualifying-winless-run-with-victory-over-somalia/">→</a></span></li><li><b>nvidia</b><span>NVIDIA Announces CEO Transition (NVIDIA Newsroom). 500+ <a class="src" href="https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition">→</a></span></li></ol></div></div></div></section>
+</main>
+<footer>
+  <h2>Cómo se hizo</h2>
+  <p>Armado automáticamente a las 11:38 a. m., sin inteligencia artificial. Los resúmenes son las primeras líneas que publica cada medio. Las notas de nota roja se esconden con una lista de palabras (en config.py).</p>
+  <p>Fuentes: Agencia Ocote, BBC Mundo, DW, Emisoras Unidas, Guatefutbol, Infobae, Infobae Deportes, La Hora, Marca, NASA, Plaza Pública, Prensa Libre, Publinews, República, ScienceDaily, Xataka, Open-Meteo, Banguat, Wikipedia y Google Trends.</p>
+  
+</footer>
+</div></body></html>
