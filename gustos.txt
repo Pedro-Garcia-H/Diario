@@ -1,0 +1,77 @@
+# GUSTOS PARA EL DIARIO
+# Cada línea es un gusto. Si tiene varios nombres, van separados con |
+# Basta con que un titular mencione uno de esos nombres para que salga en "Lo tuyo".
+# Las líneas que empiezan con # no cuentan, son solo notas.
+# Para esconder algo, escribí NO: al inicio. Ejemplo:  NO: spoiler
+
+# ---------- SERIES ----------
+Breaking Bad | Better Call Saul
+The Office
+Juego de tronos | Game of Thrones | House of the Dragon
+The Walking Dead
+El juego del calamar | Squid Game
+Stranger Things
+How I Met Your Mother | Cómo conocí a tu madre
+Misterios sin resolver | Unsolved Mysteries
+
+# ---------- SERIES ANIMADAS ----------
+Los Simpson | The Simpsons
+South Park
+Pokémon | Pokemon
+Billy y Mandy | Billy & Mandy
+Bob Esponja | SpongeBob
+Los Padrinos Mágicos | Fairly OddParents
+BoJack Horseman
+Rick y Morty | Rick and Morty
+
+# ---------- PELÍCULAS Y SAGAS ----------
+Avengers | Vengadores | Marvel
+DC Comics | DC Studios | Superman | Batman
+Halloween
+película de terror | películas de terror | cine de terror | película de horror
+The Notebook | Diario de una pasión
+Marley y yo | Marley & Me
+Los Miserables | Les Misérables
+El club de la pelea | Fight Club
+Matrix
+The Butterfly Effect
+Interestelar | Interstellar
+Chicas pesadas | Mean Girls
+película navideña | películas navideñas | Christmas movie
+Norbit
+Idiocracia | Idiocracy
+Días perfectos | Perfect Days
+
+# ---------- VIDEOJUEGOS ----------
+EA Sports FC | EA FC
+GTA | Grand Theft Auto
+Super Mario | Mario Kart | Mario Party | Mario Strikers
+Zelda
+Simpsons Hit and Run
+Rayman
+God of War
+The Last of Us
+Assassin's Creed
+Call of Duty
+
+# ---------- LIBROS Y AUTORES ----------
+Linaje y racismo | Marta Elena Casaús
+La patria del criollo | Severo Martínez Peláez
+Hábitos atómicos | Atomic Habits | James Clear
+Hillary Clinton
+Stephen King
+12 reglas para la vida | Jordan Peterson
+Marco Aurelio
+
+# ---------- TEMAS ----------
+Marte | Mars
+ovni | ovnis | OVNI | UAP | UFO | fenómenos anómalos
+fantasmas | paranormal
+historia de Guatemala
+inteligencia artificial
+Navidad | navideño | navideña
+migración | migrantes
+
+# ---------- NO QUIERO VER ----------
+# Si algo te aburre o no querés spoilers, ponelo aquí.
+# NO: spoiler

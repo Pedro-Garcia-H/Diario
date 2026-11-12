@@ -21,6 +21,22 @@ El programa también:
 - quita las noticias repetidas entre medios,
 - y guarda un archivo con los diarios de días anteriores.
 
+## Lo nuevo (noviembre 2026)
+
+- **Lo tuyo**: arriba de todo, las noticias que mencionan algo de `gustos.txt`. Para agregar un gusto, poné una línea nueva. Si tiene varios nombres, separalos con `|`. Para esconder algo, empezá la línea con `NO:`.
+- **Fútbol**: próximos partidos de tus equipos, clásicos y duelos del big 6 (ESPN), resultados recientes, tabla de la Liga Nacional (ESPN, o Wikipedia si falla) y goleadores (Wikipedia). Los equipos y derbis se cambian en `config.py`.
+- **Entretenimiento**: noticias de Espinof, Vandal y 3DJuegos.
+- **Eventos**: notas de AGN, Prensa Libre, Emisoras Unidas y Publinews que hablan de festivales, conciertos, ferias, etc.
+- **El día en datos**: ahora también trae cuenta regresiva, el cielo de esta noche y una palabra en inglés.
+
+### Estrenos de cine y series (opcional)
+
+1. Creá una cuenta gratis en https://www.themoviedb.org y pedí una llave de API (Settings → API). Copiá la que dice **API Key**.
+2. En tu repositorio: **Settings → Secrets and variables → Actions → New repository secret**.
+3. Nombre: `TMDB_API_KEY`. Valor: tu llave. Guardá.
+
+Sin la llave, el diario sale igual, solo que sin "Lo que viene".
+
 ## Lo que no hace (porque no usa IA)
 
 - Los resúmenes son las primeras líneas que publica cada medio, con su tono.
