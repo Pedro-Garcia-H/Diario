@@ -22,6 +22,9 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - run: python diario.py
+        env:
+          # Llave de TMDB para los estrenos (opcional). Se guarda en Settings > Secrets.
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
       - name: Guardar el diario
         run: |
           git config user.name "Diario de Pedro"
