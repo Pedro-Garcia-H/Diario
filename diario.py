@@ -1088,6 +1088,65 @@ def actualizar_archivo():
                 f'<p><a href="../">← Diario de hoy</a></p><ul>{lis}</ul></body></html>')
 
 
+# ---------------------------------------------------------------- "En la ciudad" para Pedro.html
+CINE_URL = "https://www.cinestar.com.gt/pradera-vistares/home/"
+
+
+def titulo_de_slug(slug):
+    """Si la página no trae el título, se arma con el pedazo de la dirección."""
+    t = slug.replace("-", " ").strip()
+    return t[:1].upper() + t[1:]
+
+
+def leer_cartelera():
+    """Películas en cartelera de Cinestar Pradera Vistares, leyendo su página."""
+    try:
+        pagina = descargar(CINE_URL).text
+    except Exception as err:
+        AVISOS.append(f"No pude leer la cartelera de Cinestar ({type(err).__name__}).")
+        return []
+    pelis, vistas = [], set()
+    # Cada película tiene un enlace .../pradera-vistares/movie/<nombre>/
+    for m in re.finditer(r'<a[^>]+href="([^"]*/pradera-vistares/movie/([a-z0-9-]+)/?)"[^>]*>(.*?)</a>', pagina, re.S | re.I):
+        url, slug, dentro = m.group(1), m.group(2), m.group(3)
+        if slug in vistas:
+            continue
+        alt = re.search(r'alt="([^"]{2,120})"', dentro)
+        texto = limpiar_html(dentro)
+        titulo = (alt.group(1) if alt else texto).strip()
+        if not titulo or len(titulo) > 120 or normal(titulo) in ("ver mas", "comprar", "horarios", "ver horarios"):
+            titulo = titulo_de_slug(slug)
+        vistas.add(slug)
+        if url.startswith("/"):
+            url = "https://www.cinestar.com.gt" + url
+        pelis.append({"titulo": html.unescape(titulo), "url": url})
+    # Por si los enlaces vienen sin etiqueta <a> completa (página armada con JavaScript)
+    if not pelis:
+        for slug in dict.fromkeys(re.findall(r'/pradera-vistares/movie/([a-z0-9-]+)', pagina)):
+            pelis.append({"titulo": titulo_de_slug(slug), "url": f"https://www.cinestar.com.gt/pradera-vistares/movie/{slug}/"})
+    if not pelis:
+        AVISOS.append("La página de Cinestar no trajo películas (quizá cambió su diseño).")
+    return pelis[:20]
+
+
+def nota_json(n):
+    return {"titulo": n["titulo"], "enlace": n["enlace"], "medio": n["medio"],
+            "resumen": recortar(n.get("resumen", ""), 180),
+            "fecha": n["fecha"].isoformat() if n.get("fecha") else ""}
+
+
+def escribir_ciudad(noticias, alertas):
+    """Guarda docs/ciudad.json para que Pedro.html lo lea (avisos, eventos y cartelera)."""
+    datos = {
+        "actualizado": AHORA.isoformat(timespec="minutes"),
+        "avisos": [nota_json(n) for n in alertas],
+        "eventos": [nota_json(n) for n in noticias.get("eventos", [])[:8]],
+        "cartelera": {"cine": "Cinestar Pradera Vistares", "url": CINE_URL, "items": leer_cartelera()},
+    }
+    with open(os.path.join(SALIDA, "ciudad.json"), "w", encoding="utf-8") as f:
+        json.dump(datos, f, ensure_ascii=False, indent=1)
+
+
 def main():
     noticias, alertas = juntar_noticias()
     proximos, resultados = leer_partidos()
@@ -1101,6 +1160,10 @@ def main():
         with open(ruta, "w", encoding="utf-8") as f:
             f.write(pagina.replace('href="archivo/"', 'href="./"') if "archivo" in os.path.dirname(ruta) else pagina)
     actualizar_archivo()
+    try:  # si esto falla, el diario sale igual
+        escribir_ciudad(noticias, alertas)
+    except Exception as err:
+        AVISOS.append(f"No pude guardar ciudad.json ({type(err).__name__}).")
     total = sum(len(v) for v in noticias.values())  # incluye "Lo tuyo"
     print(f"Listo: {total} notas, {len(alertas)} alertas, {len(AVISOS)} avisos.")
     for a in AVISOS:
